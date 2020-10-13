@@ -1,0 +1,361 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 250%;
+}
+
+header {
+    background-image: url(https://source.unsplash.com/600x450/?cows);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    background-color: orange;
+    width: 100%;
+    height: 100vh;
+}
+
+header h1 {
+    margin: 0 0 1rem 50rem;
+    padding-top: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 4.5rem;
+    color: white;
+    display: inline-block;
+}
+
+header nav {
+    width: 800px;
+}
+
+header nav ul {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+header nav ul li:first-child { 
+    margin: -4rem 5rem 1rem 1rem;
+}
+
+header nav ul li:last-child {
+    margin: -4rem 5rem;
+}
+
+header div {
+   position: absolute;
+   left: 100rem;
+   top: 5rem;
+}
+header div #comprar {
+    padding: 1.25rem;
+    background-color: black;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    border: 0.15rem solid white;
+    text-decoration: none;
+
+}
+
+main .lorem {
+    background-color: orange;
+    padding-bottom: 7.5rem;
+}
+
+main .lorem h2 {
+    padding: 7.5rem 0 5rem 2rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 4.5rem;
+    color: white;
+}
+
+main .lorem p {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    color: black;
+    text-align: justify;
+}
+
+main .lorem .columna1 {
+    width: 55rem;
+    padding-left: 5rem;
+}
+
+main .lorem .columna2 {
+    width: 49.75rem;
+    position: absolute;
+    left: 63rem;
+    top: 79.2rem;
+}
+
+main .vacas {
+    background-color: orange;
+    border: 0.3rem solid white;
+    
+}
+
+main .vacas div {
+    height: 125vh;
+    padding-top: 2rem;
+    background-color: black;
+}
+
+main .vacas div img {
+    width: 33%;
+    height: 50%;
+    position: relative;
+    padding: 1rem 1rem 1rem 2rem;
+}
+
+main .vacas div #n1 {
+    position: absolute;
+    left: 12.5rem;
+    padding-top: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 4.5rem;
+    color: white;
+}
+
+main .vacas div #n2 {
+    position: absolute;
+    left: 50rem;
+    padding-top: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 4.5rem;
+    color: white;
+}
+
+main .vacas div #n3 {
+    position: absolute;
+    left: 90rem;
+    padding-top: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 4.5rem;
+    color: white;
+}
+
+main .vacas div .descripcion1 {
+    width: 30.5%;
+    position: absolute;
+    left: 1.75rem;
+    padding-top: 10rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+}
+
+main .vacas div .descripcion2 {
+    width: 30.5%;
+    position: absolute;
+    left: 39.75rem;
+    padding-top: 10rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+}
+
+main .vacas div .descripcion3 {
+    width: 30.5%;
+    position: absolute;
+    left: 78.5rem;
+    padding-top: 10rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.25rem;
+    color: white;
+    text-align: center;
+}
+
+main .vacas div #c1 {
+    position: absolute;
+    padding: 1.25rem;
+    left: 14.75rem;
+    top: 165rem;
+    background-color: grey;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    border: 0.15rem solid white;
+    text-decoration: none;
+}
+
+main .vacas div #c2 {
+    position: absolute;
+    padding: 1.25rem;
+    left: 52.75rem;
+    top: 165rem;
+    background-color: grey;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    border: 0.15rem solid white;
+    text-decoration: none;
+}
+
+main .vacas div #c3 {
+    position: absolute;
+    padding: 1.25rem;
+    left: 92.5rem;
+    top: 165rem;
+    background-color: grey;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    border: 0.15rem solid white;
+    text-decoration: none;
+}
+
+main .formulario {
+    height: 100vh;
+}
+
+main .formulario h2 {
+    margin-top: 5rem;
+    margin-left: 2rem;
+    margin-bottom: 4rem;
+    font-family: "Roboto", sans-serif;
+    font-size: 4.5rem;
+    color: orange;
+
+}
+
+main .formulario form {
+    border: none;
+}
+main .formulario .datos1 {
+    height: 10rem;
+}
+
+main .formulario .datos1 fieldset {
+    border: none;
+}
+
+main .formulario .datos1 fieldset:nth-child(2) {
+    margin-left: 5rem;
+    margin-top: 2rem;
+    
+}
+
+main .formulario .datos1 fieldset:nth-child(3) {
+    margin-left: 5rem;
+    margin-top: 2rem;
+    
+}
+
+main .formulario .datos2 fieldset {
+    border: none;
+}
+
+
+
+main .formulario form fieldset label {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-right: 2rem;
+}
+
+main .formulario form fieldset input {
+    background-color: orange;
+    width: 25rem;
+    height: 2rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+main .formulario form fieldset select {
+    background-color: orange;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+main .formulario form fieldset select optgroup {
+    background-color: orange;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+main .formulario  .datos2 {
+    margin-top: 2rem;
+}
+
+main .formulario  .datos2 fieldset label {
+    position: absolute;
+    left: 5rem;
+    
+}
+
+main .formulario form .comentario label {
+    position: absiolute;
+    top: 212.5rem;
+    left: 3rem;
+}
+
+main .formulario form fieldset #comentario {
+    margin-left: 10.5rem;
+    background-color: orange;
+    width: 25rem;
+    height: 10rem;
+    display: block;
+}
+
+main .formulario form fieldset [placeholder] {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+main .formulario .datos2 .newsletter {
+    position: absolute;
+    top: 2rem;
+    padding-top: 5rem;
+}
+
+main .formulario .datos2 .newsletter label {
+    position: absolute;
+    left: 3rem;
+    top: 225rem;
+}
+
+main .formulario .datos2 .newsletter input {
+    position: absolute;
+    left: 12rem;
+    top: 226.5rem;
+}
+
+main .formulario .datos2 button {
+    position: absolute;
+    background-color: black;
+    color: white;
+    border: 0.25rem solid grey;
+    top: 235rem;
+    left: 15rem;
+    width: 10rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+footer {
+    height: 15rem;
+    background-color: orange;
+}
