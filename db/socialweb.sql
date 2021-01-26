@@ -26,8 +26,8 @@ DROP TABLE IF EXISTS `comentarios`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `comentarios` (
   `ID_comentario` mediumint unsigned NOT NULL AUTO_INCREMENT,
-  `ID_usuario` mediumint unsigned DEFAULT NULL,
-  `ID_publicacion` mediumint unsigned DEFAULT NULL,
+  `ID_usuario` mediumint unsigned NOT NULL,
+  `ID_publicacion` mediumint unsigned NOT NULL,
   `texto` varchar(255) COLLATE utf8mb4_spanish_ci NOT NULL,
   `fecha_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `fecha_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -36,7 +36,7 @@ CREATE TABLE `comentarios` (
   KEY `comentarios_IDpublicacion_fk` (`ID_publicacion`),
   CONSTRAINT `comentarios_IDpublicacion_fk` FOREIGN KEY (`ID_publicacion`) REFERENCES `publicaciones` (`ID_publicacion`) ON DELETE RESTRICT,
   CONSTRAINT `comentarios_IDusuario_fk` FOREIGN KEY (`ID_usuario`) REFERENCES `usuarios` (`ID_usuario`) ON DELETE RESTRICT
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -85,15 +85,14 @@ DROP TABLE IF EXISTS `publicaciones`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `publicaciones` (
   `ID_publicacion` mediumint unsigned NOT NULL AUTO_INCREMENT,
-  `ID_usuario` mediumint unsigned DEFAULT NULL,
+  `ID_usuario` mediumint unsigned NOT NULL,
   `foto` varchar(200) COLLATE utf8mb4_spanish_ci NOT NULL,
   `descripcion` varchar(100) COLLATE utf8mb4_spanish_ci NOT NULL,
   `fecha_create` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `fecha_update` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`ID_publicacion`),
   KEY `publicaciones_IDusuario_fk` (`ID_usuario`),
   CONSTRAINT `publicaciones_IDusuario_fk` FOREIGN KEY (`ID_usuario`) REFERENCES `usuarios` (`ID_usuario`) ON DELETE RESTRICT
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -146,17 +145,17 @@ CREATE TABLE `usuarios` (
   `apellido` varchar(30) COLLATE utf8mb4_spanish_ci NOT NULL,
   `nickname` varchar(15) COLLATE utf8mb4_spanish_ci NOT NULL,
   `avatar` varchar(200) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `password_usuario` varchar(10) COLLATE utf8mb4_spanish_ci NOT NULL,
   `email` varchar(50) COLLATE utf8mb4_spanish_ci NOT NULL,
+  `password_usuario` varchar(15) COLLATE utf8mb4_spanish_ci NOT NULL,
   `bio` varchar(200) COLLATE utf8mb4_spanish_ci DEFAULT NULL,
   `fecha_nacimiento` date NOT NULL,
-  `codigo_validacion` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL,
-  `usuario_validado` tinyint(1) NOT NULL,
+  `fecha_create` datetime NOT NULL,
+  `rol` varchar(20) COLLATE utf8mb4_spanish_ci NOT NULL,
   PRIMARY KEY (`ID_usuario`),
   UNIQUE KEY `usuarios_nickname_uq` (`nickname`),
   UNIQUE KEY `usuarios_email_uq` (`email`),
   CONSTRAINT `usuarios_fecha_nacimiento_ck` CHECK ((`fecha_nacimiento` > _utf8mb4'1900-01-01'))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
